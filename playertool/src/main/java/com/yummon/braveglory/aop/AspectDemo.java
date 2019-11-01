@@ -13,7 +13,7 @@ public class AspectDemo {
     /**
      * 定义切点：如果有此注解的地方
      */
-    @Pointcut("execution(public * com.yummon.braveglory.service.DemoService.demoHello())")
+    @Pointcut("execution(public * com.yummon.braveglory.service.IDemoService.*())")
     public void serviceAspect() {
     }
     
@@ -26,5 +26,4 @@ public class AspectDemo {
     public void after(){
         System.out.println("===after===");
     }
-    
 }
